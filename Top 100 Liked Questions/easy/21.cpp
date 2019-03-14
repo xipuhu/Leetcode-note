@@ -1,4 +1,4 @@
-Ô­ÌâÄÚÈÝ£º
+/* Ô­ÌâÄÚÈÝ
 21. Merge Two Sorted Lists
 
 Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
@@ -7,11 +7,13 @@ Example:
 
 Input: 1->2->4, 1->3->4
 Output: 1->1->2->3->4->4
+*/
 
-
-µÚÒ»±é½â·¨´úÂë£º
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10.3 MB, less than 9.51%
+// µÚÒ»±é½â·¨´úÂë
+/* info:
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10.3 MB, less than 9.51%
+*/
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 
 	ListNode* l = new ListNode(0);
@@ -54,10 +56,11 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 
 
 
-ÍøÉÏºÃµÄ½â·¨£º
-
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10 MB, less than 68.28%
+// ÍøÉÏºÃµÄ½â·¨
+/* info
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10 MB, less than 68.28%
+*/
 ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         //speed up
         if(NULL == l1) return l2;
@@ -79,16 +82,20 @@ ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
         curRes->next = l1 ? l1 : l2;
         return res.next;
     }
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10.1 MB, less than 41.03%
+/*
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10.1 MB, less than 41.03%
+*/
 ListNode* mergeTwoLists(ListNode* a, ListNode* b) {
     if (!a || b && a->val > b->val) swap(a, b);
     if (a) a->next = mergeTwoLists(a->next, b);
     return a;
 }
 
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 9.9 MB, less than 87.68%
+/*
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 9.9 MB, less than 87.68%
+*/
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
     if(l1 == NULL)
     {
@@ -122,10 +129,11 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
 }
 
 
-¾«¼òÓÅ»¯£º
-
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10 MB, less than 68.28%
+// ¾«¼òÓÅ»¯
+/* info:
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10 MB, less than 68.28%
+*/
 ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
     if (l1 == NULL)
         return l2;
@@ -154,7 +162,7 @@ ListNode* mergeTwoLists(ListNode* l1, ListNode* l2){
     return l3->next;
 }
 
-Ë¼¿¼£º
+/* Ë¼¿¼
 1. ½â·¨Ë¼Â··½Ãæ£º
 
 ±éÀúl1ºÍl2µÄ¹ý³ÌÖÐ±È½ÏÆäÖµµÄ´óÐ¡£¬²¢Í¬Ê±ÓÃl3±£´æ½ÏÐ¡µÄ½áµã£»
@@ -206,6 +214,7 @@ C++µÄ0£ºÒòÎªC++ÖÐ²»ÄÜ½«void *ÀàÐÍµÄÖ¸ÕëÒþÊ½×ª»»³ÉÆäËûÖ¸ÕëÀàÐÍ£¬¶øÓÖÎªÁË½â¾ö¿ÕÖ¸Õ
 
 C++11µÄnullptr:ËäÈ»ÉÏÃæÎÒÃÇËµÃ÷ÁË0±ÈNULL¿ÉÒÔÈÃÎÒÃÇ¸ü¼Ó¾¯¾õ£¬µ«ÊÇÎÒÃÇ²¢Ã»ÓÐ±ÜÃâÕâ¸öÎÊÌâ¡£Õâ¸öÊ±ºòC++ 11µÄnullptr¾ÍºÜºÃµÄ½â¾öÁËÕâ¸öÎÊÌâ£¬ÎÒÃÇÔÚC++ 11ÖÐÊ¹ÓÃnullptrÀ´±íÊ¾¿ÕÖ¸Õë¡£Èç¹ûÊ¹ÓÃ nullptr ³õÊ¼»¯¶ÔÏó£¬¾ÍÄÜ±ÜÃâ 0 Ö¸ÕëµÄ¶þÒåÐÔµÄÎÊÌâ¡£
 
+*/
 
 
 

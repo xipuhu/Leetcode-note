@@ -1,4 +1,4 @@
-原题内容：
+/* 原题内容
 53. Maximum Subarray
 Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
@@ -10,12 +10,13 @@ Explanation: [4,-1,2,1] has the largest sum = 6.
 Follow up:
 
 If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+*/
 
-
-第一遍解法代码：
-
-Runtime: 8 ms, faster than 100.00%
-Memory Usage: 10.4 MB, less than 33.46%
+// 第一遍解法代码
+/* info:
+*Runtime: 8 ms, faster than 100.00%
+*Memory Usage: 10.4 MB, less than 33.46%
+*/
 int maxSubArray(vector<int>& nums) {
 
     int s1, maxsum;
@@ -35,10 +36,11 @@ int maxSubArray(vector<int>& nums) {
     return maxsum;
 }
 
-网上好的解法：
-
-Runtime: 8 ms, faster than 99.76%
-Memory Usage: 10.2 MB, less than 93.51%
+// 网上好的解法
+/* info:
+*Runtime: 8 ms, faster than 99.76%
+*Memory Usage: 10.2 MB, less than 93.51%
+*/
 // 动态规划
 int maxSubArray(vector<int>& nums) {
     int max=INT_MIN,sum=0,i,size=nums.size();
@@ -51,9 +53,10 @@ int maxSubArray(vector<int>& nums) {
     }
     return max;
 }
-
-Runtime: 12 ms, faster than 92.72%
-Memory Usage: 10.5 MB, less than 20.59%
+/* info:
+*Runtime: 12 ms, faster than 92.72%
+*Memory Usage: 10.5 MB, less than 20.59%
+*/
 int maxSubArray(vector<int>& nums){
     if(nums.empty())
         return 0;
@@ -72,10 +75,11 @@ int maxSubArray(vector<int>& nums){
     return result;
 }
 
-精简优化：
-
-Runtime: 12 ms, faster than 92.72%
-Memory Usage: 10.5 MB, less than 17.28%
+// 精简优化
+/* info:
+*Runtime: 12 ms, faster than 92.72%
+*Memory Usage: 10.5 MB, less than 17.28%
+*/
 // 贪心算法
 int maxSubArray(vector<int>& nums){
     int maxSum = nums[0];
@@ -88,9 +92,10 @@ int maxSubArray(vector<int>& nums){
 
     return maxSum;
 }
-
-Runtime: 12 ms, faster than 91.56%
-Memory Usage: 10.5 MB, less than 13.36%
+/* info:
+*Runtime: 12 ms, faster than 91.56%
+*Memory Usage: 10.5 MB, less than 13.36%
+*/
 // 分治算法
 struct Index
 {
@@ -172,7 +177,7 @@ int maxSubArray(vector<int>& nums){
 }
 
 
-思考：
+/* 思考
 1. 解法思路方面：
 
 动态规划：
@@ -199,7 +204,7 @@ INT_MIN\INT_MAX在标准头文件limits.h中定义：
 
 在一个函数中，不要直接使用函数的参数来作为函数要返回的结果值变量，应该另外声明一个变量来存储函数要返回的结果，这样不容易搞混。
 
-
+*/
 
 
 

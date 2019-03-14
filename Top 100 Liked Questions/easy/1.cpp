@@ -1,5 +1,4 @@
-//原题内容：
-
+/* 原题内容
 1. Two Sum
 Given an array of integers, return indices of the two numbers such that they add up to a specific target.
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
@@ -10,9 +9,9 @@ Given nums = [2, 7, 11, 15], target = 9,
 
 Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
+*/
 
-
-//第一遍解法代码：
+// 第一遍解法代码
 //时间复杂度O(n^2) 144ms beats 35.96%
 vector<int> twoSum(vector<int>& nums, int target) {
     vector<int> indices;
@@ -32,9 +31,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return indices;
 }
 
-//网上好的解法：
-//方法一：使用一个哈希表，存储每个数对应的下标
-时间复杂度：O(n) 12ms beats 97.81%
+// 网上好的解法
+//方法一：使用一个哈希表，存储每个数对应的下标,时间复杂度：O(n) 12ms beats 97.81%
 vector<int> twoSum(vector<int> &nums, int target) {
 
     unordered_map<int, int> mapping;        //使用map后结果为：16ms beats 57.75%
@@ -55,8 +53,8 @@ vector<int> twoSum(vector<int> &nums, int target) {
     return result;
 }
 
-//精简优化：
-12ms beats 97.81%
+// 精简优化
+//12ms beats 97.81%
 vector<int> twoSum(vector<int>& nums, int target) {
     unordered_map<int, int> hash_table;
     vector<int> indices;
@@ -75,7 +73,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
     return indices;
 }
-20ms beats 43.68%
+//20ms beats 43.68%
 vector<int> twoSum(vector<int>& nums, int target) {
     unordered_map<int, int> hash_table;
     for (int i = 0; i < nums.size(); ++i){
@@ -87,8 +85,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
     }
     return vector<int>();
 }
-/*
-思考：
+
+/* 思考
 1. 解法思路方面：
    本题有两个技巧是需要注意的：
 

@@ -1,4 +1,4 @@
-Ô­ÌâÄÚÈİ£º
+/* Ô­ÌâÄÚÈİ
 101. Symmetric Tree
 
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
@@ -18,11 +18,13 @@ But the following [1,2,2,null,3,null,3] is not:
 
 Note:
 Bonus points if you could solve it both recursively and iteratively.
+*/
 
-µÚÒ»±é½â·¨´úÂë£º
-
-Runtime:  ms, faster than %
-Memory Usage:  MB, less than %
+// µÚÒ»±é½â·¨´úÂë
+/* info:
+*Runtime:  ms, faster than %
+*Memory Usage:  MB, less than %
+*/
 vector<int> results;
 void InOrder(TreeNode* T){
     if (T != NULL){
@@ -47,10 +49,11 @@ bool isSymmetric(TreeNode* root) {
     return true;
 }
 
-ÍøÉÏºÃµÄ½â·¨£º
-
-Runtime: 16 ms, faster than 41.18%
-Memory Usage: 15.7 MB, less than 90.61%
+// ÍøÉÏºÃµÄ½â·¨
+/* info:
+*Runtime: 16 ms, faster than 41.18%
+*Memory Usage: 15.7 MB, less than 90.61%
+*/
 // µİ¹é
 bool isMirror(TreeNode* T1, TreeNode* T2){
 
@@ -66,8 +69,10 @@ bool isSymmetric(TreeNode* root) {
     return isMirror(root, root);
 }
 
-Runtime: 12 ms, faster than 97.13%
-Memory Usage: 16.1 MB, less than 19.86%
+/* info:
+*Runtime: 12 ms, faster than 97.13%
+*Memory Usage: 16.1 MB, less than 19.86%
+*/
 // µü´ú1
 bool isSymmetric(TreeNode* root){
     queue<TreeNode* > q;
@@ -94,8 +99,11 @@ bool isSymmetric(TreeNode* root){
     return true;
 
 }
-Runtime: 12 ms, faster than 97.13%
-Memory Usage: 15.9 MB, less than 63.54%
+
+/* info:
+*Runtime: 12 ms, faster than 97.13%
+*Memory Usage: 15.9 MB, less than 63.54%
+*/
 // µü´ú2
 bool isSymmetric(TreeNode* root){
     queue<TreeNode* > q;
@@ -125,18 +133,20 @@ bool isSymmetric(TreeNode* root){
 
 }
 
-¾«¼òÓÅ»¯£º
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10 MB, less than 68.28%
+// ¾«¼òÓÅ»¯
+/* info:
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10 MB, less than 68.28%
+*/
 
 
-Ë¼¿¼£º
+/* Ë¼¿¼
 1. ½â·¨Ë¼Â··½Ãæ£º
 
 µü´ú£ºÍ¨¹ıÒ»¸ö¶ÓÁĞ£¬À´½»Ìæ¶ÁÈ¡×óÓÒ½áµãÖµ£¬¼´±£´æµÄË³ĞòÎª-[p1->left, p2->right, p1->right, p2->left]£¬µ±×îÇ°ÃæÁ½¸öÁ¬ĞøµÄÏàÁÚ½áµãÖµÏàµÈÔò¼ÌĞøÏÂÈ¥µü´úÏÂÈ¥¡£
 
 µİ¹é£ºÍ¨¹ı¹Û²ì¿ÉÒÔÖªµÀ£¬µ±Á½¸ö¶ş²æÊ÷»¥Îª¾µÏñµÄÊ±ºò£¬ÔòÒ»¸ö¶ş²æÊ÷µÄ×ó×ÓÊ÷Ò»¶¨ºÍÁíÒ»¸ö¶ş²æÊ÷µÄÓÒ×ÓÊ÷ÏàÍ¬£¬²¢ÇÒÕâ¸ö¶ş²æÊ÷µÄÓÒ×ÓÊ÷ºÍÁíÒ»¸ö¶ş²æÊ÷µÄ×ó×ÓÊ÷ÏàÍ¬¡£Í¨¹ıÕâ¸öÏÖÏóÀ´½øĞĞµİ¹é´¦Àí£º
- 
+    
 
 
 2. ´úÂë½â¾ö·½Ãæ£º
@@ -152,8 +162,7 @@ if(p1->val == p2->val)         //×îºóÅĞ¶Ïp1ºÍp2µÄÖµÊÇ·ñÏàµÈ£¨´ËÊ±ÒÑ¾­È·±£p1ºÍp2¶
 1£©µİ¹éÊÇÖØ¸´µ÷ÓÃº¯Êı×ÔÉíÊµÏÖÑ­»·
 2£©µü´úÊÇº¯ÊıÄÚÄ³¶Î´úÂëÊµÏÖÑ­»·
 3£©µü´úºÍÆÕÍ¨Ñ­»·µÄÇø±ğÊÇ£ºµü´úÊ±£¬´úÂëÖĞ²ÎÓëÔËËãµÄ±äÁ¿Í¬Ê±ÊÇ±£´æ½á¹ûµÄ±äÁ¿£¬µ±Ç°±£´æµÄ½á¹û×÷ÎªÏÂÒ»´ÎÑ­»·¼ÆËãµÄ³õÊ¼Öµ¡£
-
-
+*/
 
 
 

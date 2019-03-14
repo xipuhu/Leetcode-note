@@ -1,4 +1,4 @@
-原题内容：
+/* 原题内容
 121. Best Time to Buy and Sell Stock
 
 Say you have an array for which the ith element is the price of a given stock on day i.
@@ -17,9 +17,9 @@ Example 2:
 Input: [7,6,4,3,1]
 Output: 0
 Explanation: In this case, no transaction is done, i.e. max profit = 0.
+*/
 
-
-第一遍解法代码：
+// 第一遍解法代码
 
 Runtime: 12 ms, faster than 100.00%
 Memory Usage: 10.3 MB, less than 9.51%

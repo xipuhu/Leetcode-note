@@ -1,4 +1,4 @@
-原题内容：
+/* 原题内容
 70. Climbing Stairs
 You are climbing a stair case. It takes n steps to reach to the top.
 
@@ -22,11 +22,13 @@ Explanation: There are three ways to climb to the top.
 1. 1 step + 1 step + 1 step
 2. 1 step + 2 steps
 3. 2 steps + 1 step
+*/
 
-
-第一遍解法代码：
-Runtime:  4 ms, faster than 100.00%
-Memory Usage: 8.7 MB, less than 32.08%
+// 第一遍解法代码
+/* info:
+*Runtime:  4 ms, faster than 100.00%
+*Memory Usage: 8.7 MB, less than 32.08%
+*/
 int climbStairs(int n) {
 
     if (n == 1)
@@ -45,9 +47,11 @@ int climbStairs(int n) {
     return fb[i - 1];
 }
 
-网上好的解法：
-Runtime:  4 ms, faster than 100.00%
-Memory Usage: 8.5MB, less than 59.00%
+// 网上好的解法
+/* info:
+*Runtime:  4 ms, faster than 100.00%
+*Memory Usage: 8.5MB, less than 59.00%
+*/
 int climbStairs(int n) {
         int i, wayN_1=1, wayN_2=1;
         int res = 1;
@@ -66,16 +70,19 @@ int climbStairs(int n) {
             return res;
         }
  }
-Runtime:  4 ms, faster than 100.00%
-Memory Usage: 8.3MB, less than 90.02.00%
+/* info:
+*Runtime:  4 ms, faster than 100.00%
+*Memory Usage: 8.3MB, less than 90.02%
+*/
 int climbStairs(int n) {
        int x[3]={1,1,0},k=1;
        while(++k<=n)    x[k%3] = x[(k-1)%3] + x[(k-2)%3];
        return x[n%3];
 }
-
-Runtime:  ms, faster than %
-Memory Usage: MB, less than %
+/* info:
+*Runtime:  ms, faster than %
+*Memory Usage: MB, less than %
+*/
 int climbs(int n,vector<int>& r){
     if(r[n] != 0)
         return r[n];
@@ -95,9 +102,11 @@ int climbStairs(int n){
 
 }
 
-精简优化：
-Runtime: 12 ms, faster than 100.00%
-Memory Usage: 10 MB, less than 68.28%
+// 精简优化
+/* info:
+*Runtime: 12 ms, faster than 100.00%
+*Memory Usage: 10 MB, less than 68.28% 
+*/
 int climbStairs(int n){	
     int result;
     result = (1 / sqrt(5)) * (pow((1 + sqrt(5)) / 2, n+1) - pow((1 - sqrt(5)) / 2, n+1));
@@ -106,8 +115,7 @@ int climbStairs(int n){
 
 }
 
-
-思考：
+/* 思考
 1. 解法思路方面：
 
 本题可以利用斐波纳契数列(Fibonacci)的规律进行解题
@@ -115,7 +123,7 @@ int climbStairs(int n){
 斐波纳契数列的计算公式如下：
       
 2. 代码解决方面：
-
+*/
 
 
 

@@ -1,4 +1,4 @@
-原题内容：
+/* 原题内容
 
 20. Valid Parentheses
 Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
@@ -34,9 +34,9 @@ Example 5:
 
 Input: "{[]}"
 Output: true
+*/
 
-
-第一遍解法代码：
+// 第一遍解法代码
 //时间复杂度O(n) 4ms beats 100%
 bool isValid(string s) {
 
@@ -87,7 +87,7 @@ bool isValid(string s) {
     return false;
 }
 
-网上好的解法：
+// 网上好的解法
 //时间复杂度O(n) 4ms beats 100%
         bool isValid(string s) {
             map<char, char> parenth_dict;
@@ -123,7 +123,7 @@ bool isValid(string s) {
         return st.size() == 0;
     }
 
-精简优化：
+// 精简优化
 //时间复杂度O(n) 4ms beats 100%
 bool isValid(string s){
     stack<char> s1;
@@ -149,7 +149,7 @@ bool isValid(string s){
     return s1.empty();
 }
 
-思考：
+/* 思考
 1. 解法思路方面：
 
 第一遍代码采用了两个stack模拟括号匹配的过程。
@@ -167,5 +167,5 @@ bool isValid(string s){
 在判断两个浮点数a和b是否相等时，不要用 a == b，应该判断两者之差的绝对值fabs(a-b)是否小于某个阈值，例如 1e-9
 
 在需要使用s1.top()之前，一定要先判断下s1是否为空，依次类推在要使用容器的元素的时候，一定先思考下该容器现在的状态是否为空。
-
+*/
 
