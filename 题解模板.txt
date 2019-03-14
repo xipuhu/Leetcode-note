@@ -1,0 +1,33 @@
+原题内容：
+
+
+
+第一遍解法代码：
+
+Runtime: 12 ms, faster than 100.00%
+Memory Usage: 10.3 MB, less than 9.51%
+
+
+网上好的解法：
+
+Runtime: 12 ms, faster than 100.00%
+Memory Usage: 10 MB, less than 68.28%
+
+
+精简优化：
+
+Runtime: 12 ms, faster than 100.00%
+Memory Usage: 10 MB, less than 68.28%
+
+思考：
+1. 解法思路方面：
+
+
+
+2. 代码解决方面：
+
+
+
+
+
+
