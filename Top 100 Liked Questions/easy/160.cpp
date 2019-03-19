@@ -127,10 +127,38 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
 }
 // 精简优化
 /* info:
-*Runtime: 12 ms, faster than 100.00%
-*Memory Usage: 10 MB, less than 68.28%
+*Runtime: 52 ms, faster than 97.87%
+*Memory Usage: 16.8 MB, less than 39.36%
 */
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+    if (headA == NULL || headB == NULL) return NULL;
+	
+    int lenA = 0;
+    int lenB = 0;
+    ListNode * p = headA;
 
+    while (p != NULL) ++lenA, p = p->next;
+    p = headB;
+    while (p != NULL) ++lenB, p = p->next;
+
+    if (lenA > lenB){
+        for (int i = 0; i < lenA - lenB; ++i)
+            headA = headA->next;
+    }
+    else if (lenA < lenB){
+        for (int i = 0; i < lenB - lenA; ++i)
+            headB = headB->next;
+    }
+
+    while (headA != NULL && headB != NULL){
+        if (headA == headB)
+            return headA;
+        headA = headA->next;
+        headB = headB->next;
+    }
+
+    return NULL;
+}
 /* 思考
 1. 解法思路方面：
 
